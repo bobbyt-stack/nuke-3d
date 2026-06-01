@@ -37,7 +37,9 @@ You wake up in a neon-lit underground complex. Six aliens between you and the ex
 
 ## How to run
 
-Because the game uses pointer lock and the Web Audio API, it has to be served over `http://` rather than opened as a `file://` URL.
+**The easy way:** just double-click `index.html` (or open it in your browser with `File → Open`). No server, no build step, nothing to install. It works straight from the filesystem in every modern browser.
+
+**If you want a local server** (some browsers restrict a few APIs on `file://` in private mode, or you just prefer it), any static file server will do:
 
 ```bash
 # From the repo root
@@ -45,7 +47,7 @@ python3 -m http.server 8000
 # then open http://localhost:8000 in any modern browser
 ```
 
-Or just drop `index.html` behind any static file server (nginx, Caddy, GitHub Pages, etc.). No `npm install`, no bundler, no transpilation.
+Or drop `index.html` behind any static host — nginx, Caddy, GitHub Pages, `npx serve`, whatever. No `npm install`, no bundler, no transpilation.
 
 ## Project structure
 
